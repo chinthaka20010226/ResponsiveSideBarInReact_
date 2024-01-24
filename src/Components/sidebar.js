@@ -2,7 +2,7 @@ import React from 'react';
 import { FaTh, FaBars } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
-const Siedebar = () => {
+const Siedebar = ({children}) => {
     const menuItems = [
         {
             path:"/about",
@@ -51,6 +51,7 @@ const Siedebar = () => {
                     }
                 </div>
             </div>
+            <main>{children}</main>
         </div>
     )
 }
