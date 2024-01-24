@@ -2,7 +2,7 @@ import React from 'react';
 import { FaTh, FaBars } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
-function Siedebar(){
+const Siedebar = () => {
     const menuItems = [
         {
             path:"/about",
@@ -42,10 +42,10 @@ function Siedebar(){
                 </div>
                 <div className='body-section'>
                     {
-                        menuItems.map((items, index) => (
-                            <NavLink to={items.path} key={index} className="link" activeclassName="active">
-                                <div className='icon'>{items.icon}</div>
-                                <div className='link-text'>{items.name}</div>
+                        menuItems.map((item, index) => (
+                            <NavLink to={item.path} key={index} className="link" activeclassName="active">
+                                <div className='icon'>{item.icon}</div>
+                                <div className='link-text'>{item.name}</div>
                             </NavLink>
                         ))
                     }
