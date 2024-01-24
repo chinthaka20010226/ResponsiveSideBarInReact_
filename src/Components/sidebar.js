@@ -4,11 +4,6 @@ import { FaTh, FaBars } from 'react-icons/fa';
 function Siedebar(){
     const menuItems = [
         {
-            path:"/",
-            name:"Dashboard",
-            icon:<FaTh />
-        },
-        {
             path:"/about",
             name:"Dashboard",
             icon:<FaTh />
@@ -36,7 +31,28 @@ function Siedebar(){
     ]
 
     return(
-        <div></div>
+        <div className='container'>
+            <div className='sidebar'>
+                <div className='top-section'>
+                    <h1 className='logo'>Logo</h1>
+                    <div className='bar'>
+                        <FaBars />
+                    </div>
+                </div>
+                <div className='body-section'>
+                    <ul>
+                        {menuItems.map((menuItems, index) => (
+                            <li key={index}>
+                                <a href={menuItems.path}>
+                                    {menuItems.icon}
+                                    {menuItems.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </div>
     )
 }
 
