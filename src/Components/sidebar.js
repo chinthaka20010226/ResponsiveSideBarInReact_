@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Sidebar(){
+function Siedebar(){
     return(
         <div>
-            <h1>This is a Sidebar</h1>
+            <h1>this is Sidebar</h1>
         </div>
     )
 }
 
-export default Sidebar;
+export default Siedebar;
