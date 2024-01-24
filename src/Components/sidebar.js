@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTh, FaBars } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 function Siedebar(){
     const menuItems = [
@@ -40,16 +41,14 @@ function Siedebar(){
                     </div>
                 </div>
                 <div className='body-section'>
-                    <ul>
-                        {menuItems.map((menuItems, index) => (
-                            <li key={index}>
-                                <a href={menuItems.path}>
-                                    {menuItems.icon}
-                                    {menuItems.name}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                    {
+                        menuItems.map((items, index) => (
+                            <NavLink to={items.path} key={index} className="link" activeclassName="active">
+                                <div className='icon'>{items.icon}</div>
+                                <div className='link-text'>{items.name}</div>
+                            </NavLink>
+                        ))
+                    }
                 </div>
             </div>
         </div>
